@@ -5,6 +5,7 @@
 
 html {
 	font-size: 62.5%;
+  font-family: CicleGordita, Arial, sans-serif;
 }
 
 body {
@@ -48,24 +49,98 @@ input[type="file"] > intput[type="button"]:focus {
 
 #container {
 	background: rgba(255, 255, 255, 0.8);
-	margin: 3% auto;
+	margin: 3% auto 0;
 	padding: 1%;
 	width: 70%;
 }
 
-#portfolio {
+#header, #portfolio {
 	text-align: center;
+}
+
+#portfolio a {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: inline-block;
+}
+#portfolio a img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#portfolio a img:first-child {
+  z-index: 40;
+}
+
+
+
+#header {
+    text-align: center;
+}
+#header img {
+  width: 575px;
+  margin-bottom: 30px;
 }
 
 #about-us p {
-	text-align: justify;
+    font-size: 1.75em;
+    text-align: center;
 }
 
 #contact {
-	font-family: CicleGordita, Arial, sans-serif;
-	font-size: 2.4rem;
-	text-align: center;
+    font-family: CicleGordita, Arial, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
 }
+
+#modal-pop { /*--Transparent background layer--*/
+    display: none; /*--hidden by default--*/
+    background: #000;
+    position: fixed; left: 0; top: 0;
+    width: 100%; height: 100%;
+    opacity: .80;
+    z-index: 9999;
+    text-align: center;
+}
+#modal-content{
+    background: #fff;
+    padding: 20px;
+    border: 20px solid #ddd;
+    /*float: left;*/
+    font-size: 1.2em;
+    position: fixed;
+    margin-top: 50px;
+    margin-left: 23%;
+    width: 50%;
+    /*top: 50%; left: 50%;*/
+    z-index: 99999;
+    /*--CSS3 Box Shadows--*/
+    -webkit-box-shadow: 0px 0px 20px #000;
+    -moz-box-shadow: 0px 0px 20px #000;
+    box-shadow: 0px 0px 20px #000;
+    /*--CSS3 Rounded Corners--*/
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.modal-close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+#content {
+
+    text-align: center;
+
+
+}
+#content h1 {
+
+    font-size: 2.1em;
+
+}
+
 
 /*.gallery-tile {
 	float: left;
