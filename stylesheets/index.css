@@ -9,12 +9,13 @@ html {
 }
 
 body {
-	background: url(../images/himalayas.jpg) no-repeat center top fixed;
-	background-color: transparent;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	/*background: url(../images/himalayas.jpg) no-repeat center top fixed;*/
+	/*background-color: transparent;*/
+	/*-webkit-background-size: cover;*/
+	/*-moz-background-size: cover;*/
+	/*-o-background-size: cover;*/
+	/*background-size: cover;*/
+  background-color: #444;
 	font-family: HattoriHanzo, Arial, sans-serif;
 	font-size: 1.9rem;
 }
@@ -48,10 +49,12 @@ input[type="file"] > intput[type="button"]:focus {
 }
 
 #container {
-	background: rgba(255, 255, 255, 0.8);
-	margin: 3% auto 0;
+	background: #DDD;
+  border: 15px solid #999;
+  border-radius: 50px;
+	margin: 3% auto 0px;
 	padding: 1%;
-	width: 70%;
+	width: 1000px;
 }
 
 #header, #portfolio {
@@ -82,63 +85,81 @@ input[type="file"] > intput[type="button"]:focus {
   width: 575px;
   margin-bottom: 30px;
 }
-
+.home #header {
+    /*width: 250px;*/
+    /*float: left;*/
+    display: none;
+}
 #about-us p {
-    font-size: 1.75em;
+    padding: 0px 35px;
+    font-size: .9em;
     text-align: center;
 }
 
 #contact {
     font-family: CicleGordita, Arial, sans-serif;
-    font-size: 1.5em;
+    font-size: .95em;
     text-align: center;
 }
 
 #modal-pop { /*--Transparent background layer--*/
-    display: none; /*--hidden by default--*/
     background: #000;
     position: fixed; left: 0; top: 0;
     width: 100%; height: 100%;
-    opacity: .80;
+    opacity: .5;
     z-index: 9999;
     text-align: center;
 }
 #modal-content{
     background: #fff;
-    padding: 20px;
-    border: 20px solid #ddd;
-    /*float: left;*/
+    /*padding: 20px;*/
+    border: 20px solid #aaa;
     font-size: 1.2em;
     position: fixed;
-    margin-top: 50px;
-    margin-left: 23%;
-    width: 50%;
-    /*top: 50%; left: 50%;*/
+    top: 50px;
+    left: 50%;
+    margin-left: -520px;
+    width: 1000px;
     z-index: 99999;
+    text-align: center;
+    
+    
     /*--CSS3 Box Shadows--*/
     -webkit-box-shadow: 0px 0px 20px #000;
     -moz-box-shadow: 0px 0px 20px #000;
     box-shadow: 0px 0px 20px #000;
     /*--CSS3 Rounded Corners--*/
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
 }
 .modal-close {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: -23px;
+    right: 10px;
+}
+#modal-content #content {
+    padding: 20px;
 }
 #content {
 
     text-align: center;
+    /*text-align: left; */
 
-
+}
+#content img {
+    /*float: left;*/
+    /*margin-right: 15px;*/
+    /*width: 475px;*/
 }
 #content h1 {
 
     font-size: 2.1em;
 
+}
+.product.website a {
+    font-size: .8em;
+    color: blue;
 }
 
 

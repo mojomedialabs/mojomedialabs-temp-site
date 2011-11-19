@@ -23,12 +23,12 @@
 
 /* SITE */
   Created On: 2011/10/21
-  Last Updated: 2011/10/24
+  Last Updated: 2011/11/18
   Language: English
   Doctype: HTML5
   Lovingly Made In: TextMate 1.5.10 (1631)
   Lovingly Made On: OSX 10.6.8
-  Lovingly Made With: HTML5, CSS3, JavaScript, jQuery
+  Lovingly Made With: Jekyll, HTML5, CSS3, JavaScript, jQuery
 
 ................................................................................
 ..............ZZZ$ZZ$ZZ.........................................................

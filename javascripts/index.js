@@ -1,8 +1,8 @@
 $(function($){
-  var hoverT, body, modal, modalContent;
+  var hoverT, body, modal, modalOverlay, modalContent, modalLoader;
 
   body = $('body');
-  
+
   // Function returning Function for opacity management
   hoverT = function(tOpacity){
     return function(e){
@@ -11,29 +11,37 @@ $(function($){
   }
 
   // Establish the DOM structure of the Modal.
-  modal = $("<div id='modal-pop'><div id='modal-content'><a href='#javascript' class='modal-close'>[X]</a><div id='content'></div></div></div>");
+  modal = $("<div style='display: none;'><div id='modal-pop'></div><div id='modal-content'><a href='#javascript-close' class='modal-close'><img src='/images/circle-x.png' alt='Close' style='width: 20px;' title='Close' /></a><div id='content' style='overflow-y: scroll;'></div></div></div>");
+  modalOverlay = $('#modal-pop', modal);
   modalContent = $('#content', modal);
+  modalLoader = $("<img src='/images/ajax-loader.gif' alt='Loading...' title='Loading...' />");
 
   // bind a close event to the .modal-close
-  $('.modal-close', modal).bind('click', function(e){ modal.hide('fast'); });
-
+  $('.modal-close', modal).add(modalOverlay).bind('click', function(e){ e.preventDefault(); modal.hide('fast'); });
 
   // Bind to body hiding the modal if it's there, then append the modal to the body
-  body.bind('keyup', function(e){
+  $(document).bind('keyup', function(e){
     if (e.keyCode === 27) modal.hide('fast');
-  })
-  .append(modal);
-  
+  });
+  body.append(modal);
+
   // Bind the Hover events, then the Click events for the modal pop-up.
   $('#portfolio a').hover( hoverT(0), hoverT(100) )
   .bind('click', function(e){
     if ( e.which === 2 ) return;
     e.preventDefault();
-    modalContent.html("<img src='images/ajax-loader.gif'>");
+    modal.find('#modal-content').append(modalLoader);
+
+    // Set modal height relative to current
+    modalContent.css('height', (innerHeight - 250)+'px')
+
     modal.show();
-    modalContent.load(this.href + ' #content');
+    modalContent.load(this.href + ' #content', function(){
+      modalLoader.remove();
+    });
   });
 
-  
+  //window.modal = modal;
 
+  //$('a[href$="temp.html"]').click();
 });
