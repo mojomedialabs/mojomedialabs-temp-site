@@ -7,10 +7,7 @@
   Lead Developer: Sean Eshbaugh
   Contact: sean (at) teamrgc.com
 
-  Developer: Stephen Middleton
-  Contact: stephen (at) teamrgc.com
-
-  Project Administrator: Deanne Faglie
+  Account Manager: Deanne Faglie
   Contact: deanne (at) teamrgc.com
 
   Project Manager: Niki Casiglio
@@ -19,11 +16,10 @@
 /* THANKS */
   Michael Rose
   Nikole Rose
-  Carl Thompson
 
 /* SITE */
   Created On: 2011/10/21
-  Last Updated: 2011/11/18
+  Last Updated: 2011/12/15
   Language: English
   Doctype: HTML5
   Lovingly Made In: TextMate 1.5.10 (1631)

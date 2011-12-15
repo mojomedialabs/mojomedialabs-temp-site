@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Mojo Media Labs{% if page.title %} | {{page.title}}{% endif %}</title>
     <meta name="description" content="" />
     <meta name="author" content="Mojo Media Labs" />
@@ -10,22 +9,30 @@
     <link href="/stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/index.css" media="screen" rel="stylesheet" type="text/css" />
     <!--[if IE]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="application/javascript"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <!--<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />-->
-    <link rel="author" href="/humans.txt" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="application/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="application/javascript"></script>
+    <script src="/javascripts/index.js" type="application/javascript"></script>
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="/humans.txt" rel="author" />
 </head>
 <body>
-    <script src="/javascripts/jquery-1.6.4.min.js"></script>
     <div id="container" class="{{ page.bodyClass }}">
-    {{ content }}
-        <div id="contact">
-            <span id="email-address"><a href="mailto:mojo@teamrgc.com">mojo@teamrgc.com</a></span> | <span id="phone-number"><a href="tel:972-815-1070">972-815-1070</a></span><br />
-            <span id="address="><a href="http://maps.google.com/maps?hl=en&sugexp=kjrmc&cp=16&gs_id=2s&xhr=t&q=400+e+las+colinas+boulevard+irving+tx&gs_upl=&bav=on.2,or.r_gc.r_pw.,cf.osb&biw=1680&bih=860&um=1&ie=UTF-8&hq=&hnear=0x864e82c75d5a895b:0xf15b8d043e22658f,400+E+Las+Colinas+Blvd,+Irving,+TX+75039&gl=us&ei=Q_mzTvDcOo64tweO0_mYBA&sa=X&oi=geocode_result&ct=title&resnum=1&sqi=2&ved=0CBoQ8gEwAA">400 E. Las Colinas Blvd. Irving, TX 75039</a></span>
-        </div>
+		{{ content }}
+		<div id="avoid-ram">
+			<a href="avoid-ram.html"><img src="/images/avoid-ram.png" alt="Avoid RAM" title="Avoid RAM" /></a>
+		</div>
+		<div id="footer">
+	        <div id="contact">
+	            <span id="email-address"><a href="mailto:mojo@teamrgc.com">mojo@teamrgc.com</a></span> <span class="big">|</span> <span id="phone-number"><a href="tel:972-815-1070">972-815-1070</a></span> <span class="big">|</span> <span id="address="><a href="http://maps.google.com/maps?hl=en&amp;sugexp=kjrmc&amp;cp=16&amp;gs_id=2s&amp;xhr=t&amp;q=400+e+las+colinas+boulevard+irving+tx&amp;gs_upl=&amp;bav=on.2,or.r_gc.r_pw.,cf.osb&amp;biw=1680&amp;bih=860&amp;um=1&amp;ie=UTF-8&amp;hq=&amp;hnear=0x864e82c75d5a895b:0xf15b8d043e22658f,400+E+Las+Colinas+Blvd,+Irving,+TX+75039&amp;gl=us&amp;ei=Q_mzTvDcOo64tweO0_mYBA&amp;sa=X&amp;oi=geocode_result&amp;ct=title&amp;resnum=1&amp;sqi=2&amp;ved=0CBoQ8gEwAA">400 E. Las Colinas Blvd. Irving, TX 75039</a></span>
+	        </div>
+			<div id="a-rose-group-company">
+				MOJO Media Labs is a division of <a href="http://www.rosegroupcompanies.com/">Rose Group Companies</a>.
+			</div>
+		</div>
     </div>
-    <script src="/javascripts/index.js"></script>
 </body>
 </html>
 

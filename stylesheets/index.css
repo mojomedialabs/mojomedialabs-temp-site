@@ -3,25 +3,28 @@
 @font-face { font-family: CicleGordita; src: url("../fonts/Cicle_Gordita.ttf"); }
 @font-face { font-family: HattoriHanzo; src: url("../fonts/Hattori_Hanzo.otf"); }
 
+/* Begin General Styles */
+
 html {
 	font-size: 62.5%;
-  font-family: CicleGordita, Arial, sans-serif;
+	font-family: CicleGordita, Arial, sans-serif;
 }
 
 body {
 	/*background: url(../images/himalayas.jpg) no-repeat center top fixed;*/
-	/*background-color: transparent;*/
-	/*-webkit-background-size: cover;*/
-	/*-moz-background-size: cover;*/
-	/*-o-background-size: cover;*/
-	/*background-size: cover;*/
-  background-color: #444;
+	background: url(../images/background.jpg) no-repeat center top fixed;
+	background-color: #444444;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	font-family: HattoriHanzo, Arial, sans-serif;
 	font-size: 1.9rem;
 }
 
 a, a:hover, a:focus, a:active, a:visited {
-	color: #c40063;
+	/*color: #c40063;*/
+	color: #000000;
 	text-decoration: none;
 }
 
@@ -31,6 +34,14 @@ a:hover, a:focus, a:active {
 
 a:focus {
 	outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0;
+}
+
+h1 {
+	text-align: center;
 }
 
 button::-moz-focus-inner,
@@ -48,52 +59,82 @@ input[type="file"] > intput[type="button"]:focus {
 	outline: none;
 }
 
+.big {
+	font-size: 1.35em;
+}
+
+/* End General Styles */
+
 #container {
-	background: #DDD;
-  border: 15px solid #999;
-  border-radius: 50px;
-	margin: 3% auto 0px;
-	padding: 1%;
-	width: 1000px;
+	background: #dddddd;
+	margin: 40px auto 0px;
+	padding: 20px;
+	width: 960px;
 }
 
-#header, #portfolio {
-	text-align: center;
-}
-
-#portfolio a {
-  width: 150px;
-  height: 150px;
-  position: relative;
-  display: inline-block;
-}
-#portfolio a img {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-#portfolio a img:first-child {
-  z-index: 40;
-}
-
-
+/* Begin Header */
 
 #header {
     text-align: center;
 }
-#header img {
-  width: 575px;
-  margin-bottom: 30px;
+
+#header #logo {
+	width: 250px;
 }
+
 .home #header {
-    /*width: 250px;*/
-    /*float: left;*/
     display: none;
 }
-#about-us p {
-    padding: 0px 35px;
-    font-size: .9em;
-    text-align: center;
+
+/* End Header */
+
+/* Begin Main Navigation */
+
+nav#main-nav {
+	margin-top: 30px;
+	text-align: center;
+	width: 100%;
+}
+
+nav#main-nav ul {
+	display: inline-block;
+	list-style: none;
+}
+
+nav#main-nav ul li {
+	float: left;
+	padding: 0 80px;
+	position: relative;
+}
+
+/* End Main Navigation */
+
+/* Begin Content */
+
+#content {
+	overflow: hidden;
+}
+
+/* End Content */
+
+/* Begin Avoid RAM Logo */
+
+#avoid-ram {
+	position: fixed;
+	bottom: 0;
+	left: 10px;
+}
+
+.home #avoid-ram {
+	bottom: -43px;
+}
+
+/* End Avoid RAM Logo */
+
+/* Begin Footer */
+
+#footer {
+	text-align: center;
 }
 
 #contact {
@@ -101,6 +142,50 @@ input[type="file"] > intput[type="button"]:focus {
     font-size: .95em;
     text-align: center;
 }
+
+#a-rose-group-company {
+	color: #686868;
+	font-size: 1.0rem;
+}
+
+/* End Footer */
+
+/* Begin Home Page Portfolio */
+
+#portfolio {
+	text-align: center;
+}
+
+#portfolio a {
+	display: inline-block;
+	height: 150px;
+	position: relative;
+	width: 150px;
+}
+
+#portfolio a img {
+	left: 0px;
+	position: absolute;
+	top: 0px;
+}
+
+#portfolio a img:first-child {
+	z-index: 40;
+}
+
+/* End Home Page Portfolio */
+
+/* Begin About Us */
+
+#about-us p {
+	font-size: .9em;
+	padding: 0px 35px;
+	text-align: center;
+}
+
+/* End About Us */
+
+
 
 #modal-pop { /*--Transparent background layer--*/
     background: #000;
@@ -122,8 +207,8 @@ input[type="file"] > intput[type="button"]:focus {
     width: 1000px;
     z-index: 99999;
     text-align: center;
-    
-    
+
+
     /*--CSS3 Box Shadows--*/
     -webkit-box-shadow: 0px 0px 20px #000;
     -moz-box-shadow: 0px 0px 20px #000;
@@ -140,17 +225,6 @@ input[type="file"] > intput[type="button"]:focus {
 }
 #modal-content #content {
     padding: 20px;
-}
-#content {
-
-    text-align: center;
-    /*text-align: left; */
-
-}
-#content img {
-    /*float: left;*/
-    /*margin-right: 15px;*/
-    /*width: 475px;*/
 }
 #content h1 {
 
@@ -191,3 +265,41 @@ input[type="file"] > intput[type="button"]:focus {
 .gallery-row-end {
 	clear: left;
 }*/
+
+/* Begin The Team */
+
+.ui-tabs .ui-tabs-hide {
+    display: none;
+}
+
+#team ul {
+	line-height: 105px;
+	list-style: none;
+	margin: 5px auto;;
+	text-align: center;
+	width: 520px;
+}
+
+#team ul li {
+	display: inline;
+	width: 100px;
+}
+
+.team-member {
+	overflow: hidden;
+}
+
+.team-member img {
+	float: right;
+	margin-left: 10px;
+}
+
+/* End The Team */
+
+/* Begin Press */
+
+.press-release {
+	overflow: hidden;
+}
+
+/* End Press */
