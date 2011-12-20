@@ -8,6 +8,8 @@
 html {
 	font-size: 62.5%;
 	font-family: CicleGordita, Arial, sans-serif;
+	/*height: 100%;*/
+	overflow-x: hidden;
 }
 
 body {
@@ -20,6 +22,7 @@ body {
 	background-size: cover;
 	font-family: HattoriHanzo, Arial, sans-serif;
 	font-size: 1.9rem;
+	/*height: 100%;*/
 }
 
 a, a:hover, a:focus, a:active, a:visited {
@@ -71,6 +74,29 @@ input[type="file"] > intput[type="button"]:focus {
 	padding: 20px;
 	width: 960px;
 }
+
+/* Begin Social Links */
+
+#social-links {
+	overflow: hidden;
+}
+
+#social-links ul {
+	float: right;
+	list-style: none;
+	margin: 0 0 10px 0;
+}
+
+#social-links ul li {
+	float: left;
+	margin-left: 10px;
+}
+
+#social-links ul li img {
+	width: 48px;
+}
+
+/* End Social Links */
 
 /* Begin Header */
 
@@ -243,12 +269,6 @@ nav#main-nav ul li {
 	margin-top: 20px;
 	text-align: center;
 }
-
-.product.website a {
-    font-size: .8em;
-    color: blue;
-}
-
 
 /*.gallery-tile {
 	float: left;

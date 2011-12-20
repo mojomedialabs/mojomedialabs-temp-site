@@ -14,12 +14,20 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="application/javascript"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="application/javascript"></script>
     <script src="/javascripts/index.js" type="application/javascript"></script>
+	<script src="/javascripts/snow.js" type="application/javascript"></script>
     <link href="/favicon.ico" rel="shortcut icon" />
     <link href="images/apple-touch-icon.png" rel="apple-touch-icon" />
     <link href="/humans.txt" rel="author" />
 </head>
 <body>
     <div id="container" class="{{ page.bodyClass }}">
+		<div id="social-links">
+			<ul>
+				<li><img src="images/facebook.png" alt="Facebook" title="Facebook" /></li>
+				<li><img src="images/twitter.png" alt="Twitter" title="Twitter" /></li>
+				<li><img src="images/youtube.png" alt="YouTube" title="YouTube" /></li>
+			</ul>
+		</div>
 		{{ content }}
 		<div id="avoid-ram">
 			<a href="/avoid-ram.html"><img src="/images/avoid-ram.png" alt="Avoid RAM" title="Avoid RAM" /></a>
